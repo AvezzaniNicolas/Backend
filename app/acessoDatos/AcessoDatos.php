@@ -13,7 +13,7 @@ class AccesoDatos
             $this->objetoPDO = new PDO(
                 'mysql:host=remotemysql.com:3306;dbname=kUzlAPozxU;charset=utf8',
                 'kUzlAPozxU',
-                '48u8lsVk2g',
+                'ttYSJO3RCF',
                 [
                     PDO::ATTR_EMULATE_PREPARES => false,
                     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
