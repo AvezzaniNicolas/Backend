@@ -2,8 +2,7 @@
 class Usuario
 {
     public $nombre;
-    // public $apellido;
-    // public $usuario;
+    
     public $contrasenia;
 
     public static function crearUsuario($usuario)

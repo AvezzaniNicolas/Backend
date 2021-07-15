@@ -12,6 +12,8 @@ require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/acessoDatos/AcessoDatos.php';
 require __DIR__ . '/entidades/usuario.php';
 require __DIR__ . '/controllers/usuarioController.php';
+require __DIR__ . '/entidades/producto.php';
+require __DIR__ . '/controllers/productoController.php';
 
 $app = AppFactory::create();
 $app->addErrorMiddleware(true, true, true);
@@ -63,7 +65,12 @@ $app->post('[/]', function (Request $request, Response $response, array $args) {
 */
 $app->post('[/]', \usuarioController::class . ':CrearUsuario');
 $app->post('/login[/]', \usuarioController::class . ':retornarUsuario');
-//$app->post('/peliculas[/]', \usuarioController::class . ':retornarUsuario');
+$app->get('/productos[/]', \productoController::class . ':RetornarProductos');
+$app->post('/altaproducto[/]', \productoController::class . ':Alta');
+$app->post('/eliminarproducto[/]', \productoController::class . ':DeleteProductos');
+$app->post('/FormModProducto[/]', \productoController::class . ':obtenerFormMod');
+$app->post('/modificarproducto[/]', \productoController::class . ':ModProductos');
+
 
 
 
